@@ -1296,19 +1296,15 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 375px) {
-			/* 适用于竖屏 iPhone 的媒体查询 */
-
-			/* 全局字体大小调整 */
+			
 			body, input, textarea, select {
 				font-size: 10pt;
 			}
 
 			body {
-				padding-top: 4.25em; /* 确保内容不被导航栏遮挡 */
+				padding-top: 4.25em; 
 			}
 			
-
-			/* 标题字体调整 */
 			h1 {
 				font-size: 1.5em;
 			}
@@ -1321,31 +1317,27 @@ input, select, textarea {
 				font-size: 0.9em;
 			}
 
-			/* 图片自适应 */
 			.image img {
 				width: 100%;
 				height: auto;
 			}
 
-			/* 调整Flexbox布局 */
 			.row {
 				display: flex;
         		flex-wrap: wrap;
         		justify-content: space-between;
 			}
 
-			/* 列布局调整，确保单列显示 */
 			.col-3, .col-4, .col-6, .col-12 {
-				flex: 0 0 48%; /* 每列占据48%的宽度，确保在小屏设备上并排两列 */
+				flex: 0 0 48%; 
         		margin-bottom: 1em;
 			}
 			.col-12-small {
-				flex: 0 0 100%; /* 每列占据100% */
+				flex: 0 0 100%; 
 				padding: 1em;
 				box-sizing: border-box;
 			}
 
-			/* 按钮调整 */
 			input[type="button"],
 			input[type="submit"],
 			input[type="reset"],
@@ -1356,18 +1348,15 @@ input, select, textarea {
 				font-size: 1.1em;
 			}
 
-			/* 图片容器优化 */
 			.image {
 				margin: 10px 0;
 				text-align: center;
 			}
 
-			/* 导航栏优化 */
 			#nav a {
 				font-size: 2em;
 				margin: 0 0.15em;
 			}
-		/* 导航栏的CSS */
 		#nav {
 			position: fixed;
 			top: 0;
@@ -1377,12 +1366,10 @@ input, select, textarea {
 			
 		}
 
-		/* 内容区域的CSS */
 		body {
-			padding-top: 4.25em; /* 为内容添加足够的顶部填充，以免与导航栏重叠 */
+			padding-top: 4.25em; 
 		}
 
-					/* Wrapper 容器调整 */
 					#wrapper {
 						padding: 1em 0;
 						max-width: 95%;
@@ -2338,28 +2325,26 @@ input, select, textarea {
 }
 
 .col-3 {
-    flex: 0 0 25%; /* 每个容器占行宽的25% */
+    flex: 0 0 25%; 
     max-width: 25%;
 }
 
 .hobby-text {
-    display: block; /* 文字显示为块级元素 */
-    text-align: center; /* 居中对齐文字 */
-    margin-top: 10px; /* 文字上方留出空间 */
+    display: block; 
+    text-align: center; 
+    margin-top: 10px; 
 }
 
-/* 图片容器的基本样式 */
+
 .col-3 img {
-    width: 100%; /* 图片宽度充满容器 */
-    height: auto; /* 高度自动调整 */
-    transition: transform 0.3s ease-in-out; /* 动画效果，0.3秒内平滑过渡 */
+    width: 100%; 
+    height: auto; 
+    transition: transform 0.3s ease-in-out; 
 }
 
-/* 鼠标悬浮时图片放大 */
 .col-3 img:hover {
-    transform: scale(1.1); /* 将图片放大到原始尺寸的110% */
-    cursor: pointer; /* 鼠标悬浮时显示为指针形状 */
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 
-  
