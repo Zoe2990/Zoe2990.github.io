@@ -53,7 +53,7 @@
 									</div>
 									<div class="col-10 col-12-small">
 										<h3>Chatbot for SQL-based Cyber QA</h3>
-										<p>Built an LLM-driven chatbot system that translates user questions into SQL queries over organizational databases. Implemented using LangGraph and LLMs (LLaMA 3), with schema injection and custom prompting to improve SQL accuracy. And in is designed to be resilient against vague or ambiguous user inputs.</p>
+										<p>Applied LLMs to translate ambiguous natural language into schema-aware SQL queries over enterprise databases. Used LangGraph to manage reasoning flow and dynamically inject schema context for robust query generation.</p>
 									</div>
 								</div>
 								<div class="row">
@@ -64,7 +64,7 @@
 									</div>
 									<div class="col-10 col-12-small">
 										<h3>Cybersecurity Policy Generator</h3>
-										<p>Created a policy generation engine that produces structured, organization-specific cybersecurity policies using custom templates, real-time control implementation data, and user-uploaded asset documents.</p>
+										<p>Used OpenAI models to generate structured, organization-specific security policies by combining templated prompts with metadata, control implementation status, and asset documents retrieved via pgvector.</p>
 									</div>
 								</div>
 								<div class="row">
@@ -75,7 +75,7 @@
 									</div>
 									<div class="col-10 col-12-small">
 										<h3>Threat Modeling via RAG & MITRE ATT&CK</h3>
-										<p>Designed and implemented a Retrieval-Augmented Generation (RAG) system that models how a threat actor could attack an organization based on user input (URLs or free text). The system maps potential threats to MITRE ATT&CK techniques using a custom vector database.</p>
+										<p>Built a RAG system that combines FAISS-based retrieval over MITRE ATT&CK with LLM reasoning to convert unstructured input (URLs or text) into structured threat models and actionable insights.</p>
 									</div>
 								</div>
 								<!-- Multimodal Sentiment Analysis Project -->
@@ -197,35 +197,35 @@
 							<div id="modal4" class="modal">
 								<div class="modal-content">
 									<span class="close" onclick="closeModal('modal4')">&times;</span>
-									<h2>Chatbot for SQL-based Cyber QA</h2>
-									<h3><br>Work Content:</h3>
-									<ul>
-										<li>
-											Built with LangGraph to manage conversation state, node transitions, and result flows.
-										</li>
-										<li>
-											Integrated schema injection into prompts to dynamically guide SQL generation based on table/column structure
-										</li>
-										<li>
-											Handled ambiguous questions with: Custom prompt chains, Query clarification strategies, Fallback logic using rephrasing or online enrichment
-										</li>
-										<li>
-											Supported multi-tenancy: filtered data by organization ID to isolate tenants
-										</li>
-									</ul>
-									<h3><br>Impact:</h3>
-									<ul>
-										<li>
-											Enabled internal users to query cybersecurity data using simple questions
-										</li>
-										<li>
-											Reduced dependency on SQL knowledge for non-technical users
-										</li>
-										<li>
-											Built a modular and extensible LangGraph pipeline ready for production use
-										</li>
-									</ul>
+									<h2 style="margin-bottom: 1rem;">Chatbot for SQL-based Cyber QA</h2>
+									<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+
+										<div style="flex: 1; min-width: 280px;">
+										  <h3>Work Content:</h3>
+										  <ul>
+											<li>Built with LangGraph to manage conversation state, node transitions, and result flows.</li>
+											<li>Integrated schema injection into prompts to dynamically guide SQL generation based on table/column structure</li>
+											<li>Handled ambiguous questions with: Custom prompt chains, Query clarification strategies, Fallback logic using rephrasing or online enrichment</li>
+											<li>Supported multi-tenancy: filtered data by organization ID to isolate tenants</li>
+										  </ul>
+									  
+										  <h3 style="margin-top: 1.5rem;">Impact:</h3>
+										  <ul>
+											<li>Enabled internal users to query cybersecurity data using simple questions</li>
+											<li>Reduced dependency on SQL knowledge for non-technical users</li>
+											<li>Built a modular and extensible LangGraph pipeline ready for production use</li>
+										  </ul>
+										</div>
+									  
+										<div style="flex: 1; min-width: 280px; max-width: 500px;">
+										  <img src="images/chatbot_langgraph.png" alt="LangGraph flow diagram" 
+											   style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+										  <p style="font-size: 0.9em; color: #666; margin-top: 10px;">Diagram of LangGraph agent routing flow</p>
+										</div>
+									  
+									  </div>
 								</div>
+									  
 							</div>
 							<!-- Modal 5 -->
 							<div id="modal5" class="modal">
@@ -252,13 +252,7 @@
 									<h3><br>Impact:</h3>
 									<ul>
 										<li>
-											Demonstrated a scalable approach to custom document generation using LLMs
-										</li>
-										<li>
-											Bridged structured data and unstructured text to produce organization-specific outputs
-										</li>
-										<li>
-											Automated expert-level content generation for a domain requiring high precision and traceability
+											Demonstrated a repeatable approach to document generation with LLMs grounded in org-specific context—bridging relational data, embeddings, and templating for high-quality outputs.
 										</li>
 									</ul>
 								</div>
@@ -271,19 +265,17 @@
 									<h3><br>Work Content:</h3>
 									<ul>
 										<li>
-											Built an end-to-end RAG pipeline using LangChain + FAISS + GPT-4o, enabling real-time mapping of threat scenarios from unstructured inputs (URLs, CWE links, free text) .
+											Developed a full-stack RAG pipeline with LangChain, FAISS, and GPT-4o to convert raw user inputs (URLs, CWE entries, or free text) into structured threat insights.
 										</li>
 										<li>
-											Embedded the entire MITRE ATT&CK framework into a custom vector store to support high-precision semantic retrieval
+											Integrated a custom crawler and embedded the MITRE ATT&CK framework into the vector DB for semantic alignment. 
 										</li>
-										<li>Integrated a custom web crawler and content parser to automate threat source ingestion</li>
-										<li>Designed multi-step prompt chains to guide LLM reasoning from raw content → vector retrieval → threat modeling</li>
-										<li>Generated machine-readable output, including: Potential attack paths, Likely threat vectors, Relevant ATT&CK mappings, Suggested mitigation strategies</li>
+										<li>Prompt chain designed for interpretability and robustness across input types.</li>
 									</ul>
 									<h3><br>Impact:</h3>
 									<ul>
 										<li>
-											Used LLMs and retrieval to automate structured threat analysis, demonstrating a scalable AI-driven approach to contextual reasoning in enterprise environments.
+											Showcased how retrieval + LLMs can automate complex security reasoning with high contextual precision—turning unstructured input into operational threat models in seconds.
 										</li>
 									</ul>
 									<p><a href="https://attack.mitre.org/" target="_blank">Click for More Details</a></p>
