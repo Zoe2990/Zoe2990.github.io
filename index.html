@@ -30,13 +30,13 @@
 						<!-- Me -->
 						<article id="home" class="panel intro">
 							<header>
-								<h1>Zeao (Zoe) Zhang</h1>
-								<p><br>I'm Zoe — a Machine Learning Engineer who turns GenAI ideas into working systems that are fast, thoughtful, and user-first. I care about making things that actually work — clean code, clear thinking, and real-world impact. Curious by nature, practical by choice.</p>
+								<p><br>Hi, I'm Zoe — a Machine Learning Engineer obsessed with turning GenAI ideas into real, usable systems. From LLM agents to RAG pipelines, I build AI that doesn’t just generate — it thinks, retrieves, validates, and deploys. I like clean code, honest metrics, and products that don't break in production. Curious by nature, pragmatic by choice.
+									</p>
 							</header>
 							<!-- TODO: Add a vedio -->
 							<a href="#Project" class="jumplink pic">
 								<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-								<img src="images/me.PNG" alt="" />
+								<img src="images/zoe-profile.PNG" alt="" />
 							</a>
 						</article>
 						
@@ -53,8 +53,7 @@
 									</div>
 									<div class="col-10 col-12-small">
 										<h3>Intelligent Cybersecurity Q&A System</h3>
-										<p>Developed a multi-tenant chatbot that ensures strict data isolation while helping users query their own organization'assets, usage, and internal info — and surfaces tailored cybersecurity insights in real time.
-										</p>
+										<p>Lets security teams instantly query asset, usage, and risk data — combining internal database search, external intelligence, and insight generation — no manual SQL, no manual digging.</p>
 									</div>
 								</div>
 								<div class="row">
@@ -64,8 +63,8 @@
 										</a>
 									</div>
 									<div class="col-10 col-12-small">
-										<h3>Intelligent Security Policy Automation</h3>
-										<p>Automated the creation of organization-specific security policies using metadata, templates, and asset context — saving time, improving consistency, and helping organizations stay secure and compliant with less effort.</p>
+										<h3>Smart Security Policy Generator</h3>
+										<p>Auto-drafted tailored security policies from internal data, control evidence and templates — accelerating compliance and reducing manual work.</p>
 									</div>
 								</div>
 								<div class="row">
@@ -76,8 +75,7 @@
 									</div>
 									<div class="col-10 col-12-small">
 										<h3>AI-Driven Threat Modeling Engine</h3>
-										<p>Converted technical inputs like URLs and text into structured threat insights — enabling security teams to detect risks sooner and respond more effectively.
-										</p>
+										<p>Generates structured threat models from blogs, CVEs, and descriptions — mapping each step to MITRE ATT&CK for faster and more explainable detection.</p>
 									</div>
 								</div>
 								<!-- Multimodal Sentiment Analysis Project -->
@@ -183,10 +181,19 @@
 								<div class="modal-content">
 									<span class="close" onclick="closeModal('modal3')">&times;</span>
 									<h2>Sentiment Analysis on Social Media Regarding COVID-19 Vaccines</h2>
+									<h3><br>Background:</h3>
+									<ul>
+										<p>
+										As part of a joint research initiative between Tsinghua University and a national public health body, this project aimed to analyze public sentiment on COVID-19 vaccines based on large-scale Twitter data — to inform policy communication strategies.
+										</p>
+									</ul>
 									<h3><br>Work Content:</h3>
 									<ul>
 										<li>
-										Responsible for conducting sentiment analysis on comments about COVID-19 vaccines on Twitter. Utilizing advanced analytical models, achieved a maximum accuracy rate of <strong>72.8%</strong> .
+										Conducted sentiment analysis on vaccine-related comments using advanced machine learning models, achieving up to <strong>72.8%</strong> accuracy.
+										</li>
+										<li>
+										Processed multilingual data and performed domain adaptation to improve performance across noisy real-world inputs.
 										</li>
 										<li>
 										Contributed to the writing and translation of laboratory monographs and literature reviews, totaling approximately <strong>20,000</strong> words of content.
@@ -199,34 +206,39 @@
 							<div id="modal4" class="modal">
 								<div class="modal-content">
 									<span class="close" onclick="closeModal('modal4')">&times;</span>
-									<h2 style="margin-bottom: 1rem;">Chatbot for SQL-based Cyber QA</h2>
-									<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
-
-										<div style="flex: 1; min-width: 280px;">
-										  <h3>Work Content:</h3>
-										  <ul>
-											<li>Built with LangGraph to manage conversation state, node transitions, and result flows.</li>
-											<li>Integrated schema injection into prompts to dynamically guide SQL generation based on table/column structure</li>
-											<li>Handled ambiguous questions with: Custom prompt chains, Query clarification strategies, Fallback logic using rephrasing or online enrichment</li>
-											<li>Supported multi-tenancy: filtered data by organization ID to isolate tenants</li>
-										  </ul>
-									  
-										  <h3 style="margin-top: 1.5rem;">Impact:</h3>
-										  <ul>
-											<li>Enabled internal users to query cybersecurity data using simple questions</li>
-											<li>Reduced dependency on SQL knowledge for non-technical users</li>
-											<li>Built a modular and extensible LangGraph pipeline ready for production use</li>
-										  </ul>
-										</div>
-									  
-										<div style="flex: 1; min-width: 280px; max-width: 500px;">
-										  <img src="images/chatbot_langgraph.png" alt="LangGraph flow diagram" 
-											   style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-										  <p style="font-size: 0.9em; color: #666; margin-top: 10px;">Diagram of LangGraph agent routing flow</p>
-										</div>
-									  
-									  </div>
-								</div>
+									<h2>Intelligent Cybersecurity Q&A System</h2>
+								  
+									<div style="max-width: 700px; margin-bottom: 2rem;">
+									  <h3>Work Content:</h3>
+									  <ul>
+										<li>Designed a chatbot that understands user questions and automatically generates SQL to retrieve asset, usage, and risk data from the backend database, then delivers insights based on query results.</li>
+										<li>Built a multi-step LangGraph flow to manage dialogue states, transitions, and fallback logic.</li>
+										<li>Combined structured data, web search, and contextual prompting to handle ambiguity.</li>
+										<li>Supported multi-tenancy via org-based data isolation to ensure security and privacy.</li>
+									  </ul>
+								  
+									  <h3>Impact:</h3>
+									  <ul>
+										<li>Empowered non-technical users to query cybersecurity data without writing SQL or checking documentation.</li>
+										<li>Reduced reliance on technical staff for data access.</li>
+										<li>Created a modular architecture ready to scale into a full-featured enterprise data assistant.
+										</li>
+									  </ul>
+								  
+									  <h3>Tech Stack:</h3>
+									  <p>
+										LangGraph, SQLAlchemy, AWS Bedrock, AWS Lambda, AWS EC2, PostgreSQL, pgvector, OpenSearch,
+										Tavily, FAISS, Retrieval-Augmented Generation (RAG), Prompt Engineering, Agent Design & Tool Calling.
+									  </p>
+									</div>
+								  
+									<div style="text-align: center;">
+									  <img src="images/chatbot_langgraph.png" alt="LangGraph flow diagram"
+										   style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+									  <p style="font-size: 0.9em; color: #666; margin-top: 10px;">Diagram of LangGraph agent routing flow</p>
+									</div>
+								  </div>
+								  
 									  
 							</div>
 							<!-- Modal 5 -->
@@ -237,50 +249,58 @@
 									<h3><br>Work Content:</h3>
 									<ul>
 										<li>
-											Built a context-aware text generation pipeline combining user metadata, embeddings, and document templates
+											Automatically generated security policy documents based on organizational structure, asset context, and framework implementation status.
 										</li>
 										<li>
-											Designed a modular Markdown templating system to guide LLM output structure (sectional guidance: purpose, scope, roles, controls)
+											Developed a modular Markdown templating system to standardize outputs across sections (purpose, scope, responsibilities, controls).
 										</li>
-										<li>Injected dynamic organizational context at generation time, including:
-
-											Structured metadata (org type, size, industry)
-											
-											Control implementation status from relational DB
-											
-											Retrieved asset evidence via pgvector-based similarity search</li>
-										<li>Orchestrated the above through prompt engineering + OpenAI GPT to ensure relevance and domain alignment</li>
+										<li>Injected dynamic org-specific context such as org type, industry, maturity scores, and asset evidence to produce customized content.</li>
+										<li>Integrated LLMs, vector retrieval, and prompt engineering to ensure natural, structured, and industry-aligned outputs.</li>
 									</ul>
 									<h3><br>Impact:</h3>
 									<ul>
 										<li>
-											Demonstrated a repeatable approach to document generation with LLMs grounded in org-specific context—bridging relational data, embeddings, and templating for high-quality outputs.
+											Significantly reduced the time required for drafting policies while improving consistency and audit readiness.
+										</li>
+										<li>
+											Provided a reusable document generation framework adaptable to broader compliance and security use cases.
 										</li>
 									</ul>
+									<h3>Tech Stack:</h3>
+									  <p>
+										OpenAI GPT, Ollama, Llama, Markdown Templating, Prompt Engineering, Retrieval-Augmented Generation, PostgreSQL, LangChain
+									  </p>
 								</div>
 							</div>
 							<!-- Modal 6 -->
 							<div id="modal6" class="modal">
 								<div class="modal-content">
 									<span class="close" onclick="closeModal('modal6')">&times;</span>
-									<h2>Threat Modeling via RAG & MITRE ATT&CK</h2>
+									<h2>AI-Powered Threat Modeling Engine</h2>
 									<h3><br>Work Content:</h3>
 									<ul>
 										<li>
-											Developed a full-stack RAG pipeline with LangChain, FAISS, and GPT-4o to convert raw user inputs (URLs, CWE entries, or free text) into structured threat insights.
+											Built a Retrieval-Augmented Generation (RAG) pipeline to convert user inputs—blogs, CVEs, or natural language descriptions—into structured threat modeling results.
 										</li>
 										<li>
-											Integrated a custom crawler and embedded the MITRE ATT&CK framework into the vector DB for semantic alignment. 
+											Mapped each step of the threat model (Tactic → Technique → Sub-technique) to the MITRE ATT&CK framework for clarity and standardization.
 										</li>
-										<li>Prompt chain designed for interpretability and robustness across input types.</li>
+										<li>Delivered interpretable, report-ready threat models with structured outputs for security analysis.</li>
 									</ul>
 									<h3><br>Impact:</h3>
 									<ul>
 										<li>
-											Showcased how retrieval + LLMs can automate complex security reasoning with high contextual precision—turning unstructured input into operational threat models in seconds.
+											Enabled “one-sentence input → complete threat model” workflow, increasing detection speed and explainability.
+										</li>
+										<li>
+											Lowered the barrier to threat modeling by automating reasoning over complex security knowledge bases.
 										</li>
 									</ul>
-									<p><a href="https://attack.mitre.org/" target="_blank">Click for More Details</a></p>
+									<h3>Tech Stack:</h3>
+									  <p>
+										LangChain, FAISS, GPT-4o, MITRE ATT&CK, Custom Web Crawler, Vector Embedding, Retrieval-Augmented Generation
+									  </p>
+									<p><a href="https://attack.mitre.org/" target="_blank">Click for More Details about MITRE ATT&CK framework </a></p>
 								</div>
 
 							</div>
@@ -480,7 +500,7 @@
 									
 									<!-- BUPT -->
 									<div class="col-2 col-12-small">
-										<a href="https://www.bupt.edu.cn/" target="_blank" class="image fit"><img src="images/bupt.png" alt="Beijing University of Posts and Telecommunications (BUPT) Logo"></a>
+										<a href="https://ai.bupt.edu.cn/en/About/Introduction.htm" target="_blank" class="image fit"><img src="images/bupt.png" alt="Beijing University of Posts and Telecommunications (BUPT) Logo"></a>
 									</div>
 									<div class="col-10 col-12-small">
 										<h3>Bachelor of Science (Engineering) with Honors</h3>
