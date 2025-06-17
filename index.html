@@ -52,8 +52,8 @@
 										</a>
 									</div>
 									<div class="col-10 col-12-small">
-										<h3>Intelligent Cybersecurity Q&A System</h3>
-										<p>Lets security teams instantly query asset, usage, and risk data — combining internal database search, external intelligence, and insight generation — no manual SQL, no manual digging.</p>
+										<h3>AskSec: Chatbot for Cyber Asset Intelligence</h3>
+										<p>Built a chatbot that turns natural language into SQL queries and retrieves insights from both internal databases and uploaded documents — fully automated, multi-source, and secure.</p>
 									</div>
 								</div>
 								<div class="row">
@@ -63,8 +63,8 @@
 										</a>
 									</div>
 									<div class="col-10 col-12-small">
-										<h3>Smart Security Policy Generator</h3>
-										<p>Auto-drafted tailored security policies from internal data, control evidence and templates — accelerating compliance and reducing manual work.</p>
+										<h3>Autopolicy: LLM-Powered Security Writer</h3>
+										<p>Automates cybersecurity compliance writing with LLMs — from asset data to ready-to-sign policy docs in seconds.</p>
 									</div>
 								</div>
 								<div class="row">
@@ -74,8 +74,8 @@
 										</a>
 									</div>
 									<div class="col-10 col-12-small">
-										<h3>AI-Driven Threat Modeling Engine</h3>
-										<p>Generates structured threat models from blogs, CVEs, and descriptions — mapping each step to MITRE ATT&CK for faster and more explainable detection.</p>
+										<h3>ThreatMap: AI-Powered Threat Modeling Agent</h3>
+										<p>Built an AI system that transforms unstructured threat descriptions into structured cyber threat models — from “describe a threat” to a complete ATT&CK-aligned model in seconds.</p>
 									</div>
 								</div>
 								<!-- Multimodal Sentiment Analysis Project -->
@@ -87,7 +87,7 @@
 										</a>
 									</div>
 									<div class="col-10 col-12-small">
-										<h3>Multimodal Deep Learning for Sentiment Classification</h3>
+										<h3>Multimodal Sentiment Classifier (WebConf 2024)</h3>
 										<p>Developed a deep learning system for multimodal sentiment analysis, published at the WebConf 2024 workshop, with high accuracy in sentiment categorization.</p>
 									</div>
 								</div>
@@ -211,10 +211,11 @@
 									<div style="max-width: 700px; margin-bottom: 2rem;">
 									  <h3>Work Content:</h3>
 									  <ul>
-										<li>Designed a chatbot that understands user questions and automatically generates SQL to retrieve asset, usage, and risk data from the backend database, then delivers insights based on query results.</li>
-										<li>Built a multi-step LangGraph flow to manage dialogue states, transitions, and fallback logic.</li>
-										<li>Combined structured data, web search, and contextual prompting to handle ambiguity.</li>
-										<li>Supported multi-tenancy via org-based data isolation to ensure security and privacy.</li>
+										<li>Designed an intelligent chatbot that understands user questions and generates safe SQL to retrieve asset, usage, and risk data from the backend — <strong>no manual query writing required</strong>.</li>
+										<li><strong>SQL generation, internal file retrieval, and online search</strong> to generate comprehensive answers from both structured databases and unstructured content.</li>
+										<li>Built a <strong>multi-step LangGraph agent flo</strong>w to manage conversation state, fallback handling, and validation logic for robust performance.</li>
+										<li>Integrated <strong>contextual prompting and multi-source RAG pipelines</strong> to resolve ambiguity and improve accuracy.</li>
+										<li>Enabled <strong>multi-tenant data isolation</strong> based on organization ID to ensure security and privacy in enterprise environments.</li>
 									  </ul>
 								  
 									  <h3>Impact:</h3>
@@ -245,30 +246,33 @@
 							<div id="modal5" class="modal">
 								<div class="modal-content">
 									<span class="close" onclick="closeModal('modal5')">&times;</span>
-									<h2>Cybersecurity Policy Generator</h2>
+									<h2>Autopolicy: LLM-Powered Security Writer</h2>
 									<h3><br>Work Content:</h3>
 									<ul>
 										<li>
-											Automatically generated security policy documents based on organizational structure, asset context, and framework implementation status.
+											Designed an AI assistant that writes company-specific security policies by combining internal data, compliance templates, and real-time framework status.
 										</li>
 										<li>
 											Developed a modular Markdown templating system to standardize outputs across sections (purpose, scope, responsibilities, controls).
 										</li>
 										<li>Injected dynamic org-specific context such as org type, industry, maturity scores, and asset evidence to produce customized content.</li>
-										<li>Integrated LLMs, vector retrieval, and prompt engineering to ensure natural, structured, and industry-aligned outputs.</li>
+										<li>Integrated LLMs, vector-based retrieval, and prompt engineering to ensure natural, structured, and industry-aligned outputs.</li>
 									</ul>
 									<h3><br>Impact:</h3>
 									<ul>
 										<li>
-											Significantly reduced the time required for drafting policies while improving consistency and audit readiness.
+											Reduced policy drafting time from hours to minutes while improving standardization across teams.
 										</li>
 										<li>
-											Provided a reusable document generation framework adaptable to broader compliance and security use cases.
+											Enabled non-experts to generate audit-ready, regulation-aligned policies with minimal input.
+										</li>
+										<li>
+											Provided a reusable framework that can scale across other compliance areas like privacy, access control, and data retention.
 										</li>
 									</ul>
 									<h3>Tech Stack:</h3>
 									  <p>
-										OpenAI GPT, Ollama, Llama, Markdown Templating, Prompt Engineering, Retrieval-Augmented Generation, PostgreSQL, LangChain
+										Ollama, Llama, Markdown Templating, Prompt Engineering, Retrieval-Augmented Generation, PostgreSQL, LangChain
 									  </p>
 								</div>
 							</div>
@@ -276,7 +280,7 @@
 							<div id="modal6" class="modal">
 								<div class="modal-content">
 									<span class="close" onclick="closeModal('modal6')">&times;</span>
-									<h2>AI-Powered Threat Modeling Engine</h2>
+									<h2>ThreatMap: AI-Powered Threat Modeling Agent</h2>
 									<h3><br>Work Content:</h3>
 									<ul>
 										<li>
@@ -290,16 +294,16 @@
 									<h3><br>Impact:</h3>
 									<ul>
 										<li>
-											Enabled “one-sentence input → complete threat model” workflow, increasing detection speed and explainability.
+											Enabled “one sentence in, full threat model out” — streamlining what used to be a manual and expert-heavy task.
 										</li>
 										<li>
-											Lowered the barrier to threat modeling by automating reasoning over complex security knowledge bases.
-										</li>
+											Made threat modeling faster, explainable, and accessible even for teams without deep cybersecurity expertise.
+  										</li>
 									</ul>
 									<h3>Tech Stack:</h3>
-									  <p>
-										LangChain, FAISS, GPT-4o, MITRE ATT&CK, Custom Web Crawler, Vector Embedding, Retrieval-Augmented Generation
-									  </p>
+									<p>
+										LangChain, FAISS, OpenAI GPT, GPT-4o, MITRE ATT&CK, Custom Web Crawler, Vector Embedding, Retrieval-Augmented Generation Pipelines
+									</p>
 									<p><a href="https://attack.mitre.org/" target="_blank">Click for More Details about MITRE ATT&CK framework </a></p>
 								</div>
 
@@ -445,36 +449,51 @@
 						<!-- Volunteer Section -->
 						<article id="Volunteer" class="panel">
 							<section>
-								<p><span class="icon solid fa-search"></span>  Explore more by clicking on the image.</p>
 								<!-- Volunteer Project 1 -->
 								<div class="row">
 									<div class="col-2 col-12-small">
-										<a href="https://www.bjredcross.org.cn/" target="_blank" class="image fit">
-											<img src="images/hongshizi.jpg" alt="Red Cross">
+										<a href="https://www.icrc.org/en/where-we-work/china" target="_blank" class="image fit">
+											<img src="images/redcross.jpg" alt="Red Cross">
 										</a>
 									</div>
 									<div class="col-10 col-12-small">
 										<h3>Vice President, Red Cross Society (BUPT Student Chapter)</h3>
 										<ul>
-											<li>Organizing blood donation drives</li>
-											<li>Conducting health and safety education</li>
-											<li>Supporting community service projects</li>
+											<li>Organizing blood donation drives.</li>
+											<li>Conducting health and safety education.</li>
+											<li>Supporting community service projects.</li>
 										</ul>
 									</div>
 								</div>
 								<!-- Volunteer Project 2 -->
 								<div class="row">
 									<div class="col-2 col-12-small">
-										<a href="https://www.paleozoo.cn/" target="_blank" class="image fit">
-											<img src="images/gudongwu.jpg" alt="Chinese Paleozoological Museum">
+										<a href="https://koryogroup.com/blog/museums-of-beijing-paleozoological-museum-of-china" target="_blank" class="image fit">
+											<img src="images/volunteer1.jpg" alt="Chinese Paleozoological Museum">
 										</a>
 									</div>
 									<div class="col-10 col-12-small">
 										<h3>Volunteer at the Chinese Paleozoological Museum</h3>
 										<ul>
-											<li>Providing guided tours</li>
-											<li>Offering reception and guidance to visitors</li>
-											<li>Maintaining the cleanliness and safety of exhibits</li>
+											<li>Providing guided tours.</li>
+											<li>Offering reception and guidance to visitors.</li>
+											<li>Maintaining the cleanliness and safety of exhibits.</li>
+										</ul>
+									</div>
+								</div>
+								<!-- Volunteer Project 3 -->
+								<div class="row">
+									<!-- University of Sydney -->
+									<div class="col-2 col-12-small">
+										<a href="https://www.olympics.com/en/olympic-games/beijing-2022" target="_blank" class="image fit">
+											<img src="images/Olympic.jpg" alt="Beijing Winter Olympics">
+										</a>
+									</div>
+									<div class="col-10 col-12-small">
+										<h3>Beijing Winter Olympics</h3>
+										<ul>
+											<li>Provided information and navigation services to enhance visitor experience.</li>
+											<li>Assisted with translation for international athletes, promoting cross-cultural understanding.</li>
 										</ul>
 									</div>
 								</div>
@@ -511,8 +530,6 @@
 								</div>
 							</section>
 						</article>
-						
-  
 					</div>
 				</div>
 
