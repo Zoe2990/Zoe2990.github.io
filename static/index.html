@@ -7,6 +7,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Markdown Parser -->
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+		<!-- HTML Sanitizer -->
+		<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+
+
 	</head>
 	<body class="is-preload">
 
@@ -16,6 +22,7 @@
 				<!-- Nav -->
 				<nav id="nav">
 					<a href="#" class="icon solid fa-home"><span>Home</span></a>
+					<a href="#ZChat" class="icon solid fa-robot"><span>ZChat</span></a>
 					<a href="#Project" class="icon solid fa-cogs"><span>Project</span></a>
 					<a href="#Skills" class="icon solid fa-briefcase"><span>Skills</span></a>
 					<a href="#Education" class="icon solid fa-graduation-cap"><span>Education</span></a>
@@ -34,11 +41,37 @@
 									</p>
 							</header>
 							<!-- TODO: Add a vedio -->
-							<a href="#Project" class="jumplink pic">
+							<a href="#ZChat" class="jumplink pic">
 								<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
 								<img src="images/zoe-profile.PNG" alt="" />
 							</a>
 						</article>
+
+						<!-- Chatbot Article Section -->
+						<!-- ZChat: Personal Chatbot Section -->
+						<article id="ZChat" class="panel">
+							<header>
+								<h2>ZChat 🤖</h2>
+								<p>Ask me anything about Zoe's work, experience, or projects!</p>
+								<p>
+									This is <strong>ZChat</strong> — a custom AI chatbot I built to answer questions about my work, experience, and projects.<br>
+									Think of it as your own personal interview with me — go ahead, ask anything!
+								</p>
+
+							</header>
+
+							<section>
+								<div id="chat-content" class="chat-box"></div>
+
+								<div class="chat-input-area">
+								<input id="chat-input" type="text" placeholder="Ask me anything..." onkeydown="handleKey(event)" />
+								<button class="button primary" onclick="sendMessage()">Send</button>
+								</div>
+
+								<p id="chat-status" class="chat-status"></p>
+							</section>
+						</article>
+
 						
 						<!-- Project Section -->
 						<article id="Project" class="panel">
@@ -540,12 +573,12 @@
 			</div>
 
 
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>

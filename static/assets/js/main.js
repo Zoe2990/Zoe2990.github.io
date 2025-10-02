@@ -218,3 +218,58 @@ function openModal(modalId) {
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
 }
+
+// chatbot
+function handleKey(event) {
+  if (event.key === "Enter") sendMessage();
+}
+
+async function sendMessage() {
+  const inputEl = document.getElementById("chat-input");
+  const chatContent = document.getElementById("chat-content");
+  const question = inputEl.value.trim();
+  if (!question) return;
+
+  chatContent.insertAdjacentHTML("beforeend", `
+    <div class="chat-bubble user"><strong>You:</strong> ${question}</div>
+  `);
+
+  inputEl.value = "";
+  chatContent.insertAdjacentHTML("beforeend", `<div id="loading">ZChat is typing...</div>`);
+  chatContent.scrollTop = chatContent.scrollHeight;
+
+  try {
+    const res = await fetch("/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt: question })
+    });
+    const data = await res.json();
+    document.getElementById("loading").remove();
+
+    if (data.response) {
+		const formatted = formatResponse(data.response);
+		chatContent.insertAdjacentHTML("beforeend", `
+			<div class="chat-bubble bot"><strong>ZChat:</strong><br>${formatted}</div>
+		`);
+	}
+ 	else {
+      chatContent.insertAdjacentHTML("beforeend", `
+        <div class="chat-bubble bot"><strong>ZChat:</strong> Error: ${data.error || "Unknown error"}</div>
+      `);
+    }
+
+  } catch (err) {
+    document.getElementById("loading").remove();
+    chatContent.insertAdjacentHTML("beforeend", `
+      <div class="chat-bubble bot"><strong>ZChat:</strong> Network error. Try again.</div>
+    `);
+  }
+
+  chatContent.scrollTop = chatContent.scrollHeight;
+}
+
+function formatResponse(text) {
+  const dirtyHtml = marked.parse(text);
+  return DOMPurify.sanitize(dirtyHtml);
+}
