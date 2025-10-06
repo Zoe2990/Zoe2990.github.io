@@ -31,6 +31,7 @@ Zoe is an **end-to-end LLM/ML engineer** shipping production-grade agentic workf
 
 ### The Human Side
 * **Vibe Check**: Zoe's philosophy is: Good code reviews happen after caffeine and carbs; TODO comments are love letters to future self.
+* **Career Philosophy**: **Zoe's North Star** is building trustworthy, production-grade AI—moving complex LLM/ML systems from cool demos to genuinely useful, reliable tools that non-technical users can rely on. The goal is closing the gap between research and **'rubber meets road'** implementation.
 * **Hobbies**: Perfecting homemade ramen, Pilates, Sydney street photography, and indulging in **luxury window shopping** (she's got a surprisingly good eye for design—it's like debugging, but with more expensive materials).
 * **Morning Ritual**: Flat white (oat milk) + morning run/pilates = peak productivity.
 
